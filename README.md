@@ -1,7 +1,7 @@
 # Dubbo Samples
 
-Samples for Apache Dubbo
-
+Samples for Apache Dubbo  
+learn by zhuge
 [![Build Status](https://travis-ci.org/apache/dubbo-samples.svg?branch=master)](https://travis-ci.org/apache/dubbo-samples) 
 ![license](https://img.shields.io/github/license/apache/dubbo-samples.svg)
 
