@@ -25,6 +25,9 @@ import org.apache.dubbo.samples.api.GreetingsService;
 import junit.framework.TestCase;
 import org.junit.Test;
 
+import java.lang.management.ManagementFactory;
+import java.lang.management.RuntimeMXBean;
+
 public class GreetingServiceIT {
     private static String zookeeperHost = System.getProperty("zookeeper.address", "127.0.0.1");
 
@@ -38,4 +41,14 @@ public class GreetingServiceIT {
         String message = service.sayHi("dubbo");
         TestCase.assertEquals(message, "hi, dubbo");
     }
+
+    @Test
+    public void testPid(){
+        RuntimeMXBean runtime = ManagementFactory.getRuntimeMXBean();
+        String name = runtime.getName(); // format: "pid@hostname"
+        Integer PID = Integer.parseInt(name.substring(0, name.indexOf('@')));
+        System.out.println(PID);
+
+    }
+
 }
